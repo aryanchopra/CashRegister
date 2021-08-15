@@ -26,7 +26,11 @@ export default function App() {
     }
   };
   const calculateChange = () => {
-    if (paidAmount === 0 || billAmount === 0 || billAmount > paidAmount) {
+    if (
+      paidAmount === 0 ||
+      billAmount === 0 ||
+      Number(billAmount) > Number(paidAmount)
+    ) {
       setError2("Enter valid bill amount and cash given");
       setChangeCalculated(false);
     } else if (
